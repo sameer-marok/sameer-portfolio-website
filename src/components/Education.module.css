@@ -1,0 +1,55 @@
+.timeline {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  /* The vertical line */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--border-color);
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
+  
+  .timelineItem {
+    padding: 10px 40px;
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .timelineDot {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 3px solid var(--bg-color);
+    top: 22px;
+    left: -2px;
+    z-index: 1;
+  }
+  
+  .degree {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    margin-bottom: 0.3rem;
+  }
+  
+  .institution {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin: 0.2rem 0;
+  }
+  
+  .duration {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    display: block;
+    margin-top: 0.5rem;
+  }

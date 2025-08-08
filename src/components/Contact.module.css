@@ -1,0 +1,43 @@
+.contactSection {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .contactContent {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .email {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .email:hover {
+    color: var(--accent-color);
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .socialLinks a {
+    font-size: 2.2rem;
+    color: var(--secondary-text);
+    transition: color 0.3s ease;
+  }
+  
+  .footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+  }

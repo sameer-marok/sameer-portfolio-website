@@ -1,0 +1,96 @@
+/* Hero section now uses flexbox for a responsive side-by-side layout */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stacks on mobile by default */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+/* Container for the 3D Scene canvas */
+.sceneContainer {
+  width: 100%;
+  height: 400px; /* Defines the canvas height on mobile */
+  max-width: 550px;
+}
+
+/* Container for all the text content */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.resumeButton {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--primary-text);
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resumeButton:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--accent-color);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLinks a {
+  font-size: 2rem;
+  color: var(--secondary-text);
+  transition: color 0.3s ease;
+}
+
+/* On screens larger than 768px (tablets and desktops) */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Switch to side-by-side layout */
+  }
+
+  .sceneContainer {
+    height: 500px; /* Make the canvas taller on larger screens */
+    flex: 1; /* Takes up half the space */
+  }
+
+  .heroContent {
+    flex: 1; /* Takes up the other half */
+    align-items: flex-start; /* Align text to the left */
+    text-align: left;
+  }
+}

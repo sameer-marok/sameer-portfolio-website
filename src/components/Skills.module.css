@@ -1,0 +1,34 @@
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .skillCategory {
+    width: 100%;
+  }
+  
+  .categoryTitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: capitalize;
+  }
+  
+  .skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .skillItem {
+    background-color: var(--card-bg);
+    color: var(--primary-text);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }

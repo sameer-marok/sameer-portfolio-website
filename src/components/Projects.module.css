@@ -1,0 +1,67 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    color: var(--primary-text);
+  }
+  
+  .projectLink {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    transition: color 0.3s ease;
+  }
+  
+  .projectLink:hover {
+    color: var(--accent-color);
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  
+  .tech {
+    background-color: #374151;
+    color: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
