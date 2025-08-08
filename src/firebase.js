@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // PASTE YOUR FIREBASE CONFIG OBJECT HERE
 const firebaseConfig = {
-  apiKey: "AIzaSyCq2TobXL_-3MFHC4GUAkW8dq35_4c9joM",
-  authDomain: "sameer-portfolio-f59bb.firebaseapp.com",
-  projectId: "sameer-portfolio-f59bb",
-  storageBucket: "sameer-portfolio-f59bb.firebasestorage.app",
-  messagingSenderId: "19624392971",
-  appId: "1:19624392971:web:940ae01052728b6c164a0e",
-  measurementId: "G-6L9VMD7QD5"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
   
 // Initialize Firebase
