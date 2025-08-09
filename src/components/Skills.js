@@ -16,13 +16,24 @@ const Skills = ({ data }) => {
     visible: { y: 0, opacity: 1 },
   };
 
-  return (
-    <section className="section" id="skills">
-      <h2>Technical Skills</h2>
-      <div className={styles.skillsContainer}>
-        {Object.keys(data).map((category) => (
+  const categoryOrder = ["languages", "mobile", "Frameworks & Technologies", "DeveloperTools"];
+  const getCategoryTitle = (category) => {
+  if (category === "mobile") return "Mobile Development";
+  if (category === "languages") return "Programming Languages";
+  if (category === "DeveloperTools") return "Developer Tools";
+  return category.charAt(0).toUpperCase() + category.slice(1);
+};
+
+return (
+  <section className="section" id="skills">
+    <h2>Technical Skills</h2>
+    <div className={styles.skillsContainer}>
+      {categoryOrder.map((category) => (
+        data[category] && (
           <div key={category} className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <h3 className={styles.categoryTitle}>
+              {getCategoryTitle(category)}
+            </h3>
             <motion.div
               className={styles.skillsGrid}
               variants={containerVariants}
@@ -37,10 +48,11 @@ const Skills = ({ data }) => {
               ))}
             </motion.div>
           </div>
-        ))}
-      </div>
-    </section>
-  );
+        )
+      ))}
+    </div>
+  </section>
+);
 };
 
 export default Skills;
