@@ -1,4 +1,5 @@
-/* Hero section now uses flexbox for a responsive side-by-side layout */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -28,9 +29,25 @@
 }
 
 .name {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: 'Dancing Script', cursive; /* or 'Pacifico' */
+  font-size: clamp(2.8rem, 8vw, 4rem);
+  font-weight: 500;
+  color: #ffffff;                        /* Initial color: white */
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: 
+    color 0.4s ease, 
+    text-shadow 0.4s ease, 
+    transform 0.4s ease, 
+    letter-spacing 0.4s ease;
+}
+
+.name:hover {
+  letter-spacing: 2.5px;
+  text-shadow: 0 0 8px var(--accent-color),
+               0 0 20px var(--accent-color);
+  transform: scale(1.05) rotate(-1deg);
+  cursor: default;
 }
 
 .bio {

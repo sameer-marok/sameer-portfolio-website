@@ -51,12 +51,12 @@ h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
+    left: 15%;          /* Start the underline 10% from left */
+    width: 70%;         /* Underline is 80% of h2 width */
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
+    transform: none;    /* Remove translateX */
 }
 
 .particles-canvas {

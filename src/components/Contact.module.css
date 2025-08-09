@@ -7,6 +7,18 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+    .phone {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0.5px; /* Slight spacing for clarity */
+  background-color: rgba(55, 65, 81, 0.5); /* Matches your .tech dark bg */
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: 'Courier New', monospace; /* Gives it a 'code/number' feel */
+}
   
   .email {
     font-size: 1.2rem;

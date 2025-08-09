@@ -22,6 +22,9 @@ const Contact = ({ data }) => {
         transition={{ duration: 1 }}
       >
         <h2>Get In Touch</h2>
+        <div>
+          <p className={styles.phone}>{data.phone}</p>
+        </div>
         <a href={`mailto:${data.email}`} className={styles.email}>{data.email}</a>
         <div className={styles.socialLinks}>
           {/* ✅ Mapping over socials data from Firestore */}
