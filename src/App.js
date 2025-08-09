@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useLayoutEffect } from 'react';
 import { Particles } from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 import { db } from './firebase'; // Your Firestore instance
@@ -17,6 +17,32 @@ function App() {
   // --- All Hooks are now at the top level ---
   const [portfolioData, setPortfolioData] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // --- Preserve Scroll Position on Reload ---
+
+useEffect(() => {
+  // Save scroll position before page unload
+  const handleBeforeUnload = () => {
+    localStorage.setItem("scrollPosition", window.scrollY);
+  };
+  window.addEventListener("beforeunload", handleBeforeUnload);
+
+  return () => {
+    window.removeEventListener("beforeunload", handleBeforeUnload);
+  };
+}, []);
+
+// Restore scroll position AFTER data is loaded & rendered
+useEffect(() => {
+  if (!loading && portfolioData) {
+    const savedPosition = localStorage.getItem("scrollPosition");
+    if (savedPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedPosition, 10));
+      }, 0); // Wait until DOM has rendered
+    }
+  }
+}, [loading, portfolioData]);
 
   // This memoized function loads the particle engine once
   const particlesInit = useCallback(async (engine) => {
