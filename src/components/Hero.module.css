@@ -58,6 +58,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  display: none; /* Hide resume button for now*/
 }
 
 .resumeButton:hover {
