@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useLayoutEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Particles } from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 import { db } from './firebase'; // Your Firestore instance
